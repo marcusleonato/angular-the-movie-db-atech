@@ -4,9 +4,9 @@ Bem Vindo ao Atech The Movie Database
 
 <img src="https://raw.githubusercontent.com/marcusleonato/app/master/images/tmb.png" alt=" Atech The Movie Database" align="center" />
 
-# Atech TMDB 
+# Tecnologia
 
-Foi usado as seguintes tecnológias, Angular, TypeScript, Angular Material UI, Angular-Cli, ES2015 entre outras.
+Foram usadas as seguintes tecnologias, Angular, TypeScript, Angular Material UI, Angular-Cli, ES2015 entre outras.
 
 ### Instalação
 
