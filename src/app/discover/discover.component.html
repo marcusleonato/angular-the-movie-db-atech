@@ -1,0 +1,30 @@
+<div class="container">
+  <h2 class="title-page">Explorar</h2>
+</div>
+
+<div class="main-content container">
+  <mat-progress-spinner color="primary" mode="indeterminate" *ngIf="isLoading">
+  </mat-progress-spinner>
+  <mat-card class="card-content mat-elevation-z0" *ngFor="let movie of itemList" (click)="goToMovieDetails(movie)">
+    <img [src]="movie.backdrop_path" class="card-img" [alt]="movie.title">
+    <mat-card-content class="infos-content">
+      <mat-card-title class="title-content">
+        <div class="rating-content" data-percent="movie.vote_average">
+          <mat-progress-spinner class="spinner-rating" [value]="movie.vote_average" 
+            [diameter]="32" [color]="getColorRating(movie.vote_average)">
+          </mat-progress-spinner>
+          <span>{{movie.vote_average}}</span>
+        </div>
+        <h3 class="flex">
+          {{movie.title}}
+          <span class="subtitle">{{movie.release_date | date}}</span>
+        </h3>
+      </mat-card-title>
+      <p class="overeview">{{movie.overview}}</p>
+    </mat-card-content>
+  </mat-card>
+
+</div>
+<div class="clearfix">
+  <app-footer [pager]="pager" (changePage)="changePage($event)"></app-footer>
+</div>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>The Movie DataBase - ATECH</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1976d2">
+  <meta name="description" content="A progressive web apps of movies built with angular by using TheMovieDB API">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+    .lds-circle {
+      display: inline-block;
+      width: 51px;
+      height: 51px;
+      margin: 6px;
+      border-radius: 50%;
+      background: #cef;
+      animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+
+    @keyframes lds-circle {
+      0%,
+      100% {
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+      }
+      0% {
+        transform: rotateY(0deg);
+      }
+      50% {
+        transform: rotateY(1800deg);
+        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+      }
+      100% {
+        transform: rotateY(3600deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <app-root>
+    <div class="main-content" style="clear: both;width: 1000px;margin: 0 auto;">
+      <div class="lds-circle"></div>
+    </div>
+  </app-root>
+
+  <noscript>
+    <div class=container>
+      <div class="main-content">
+        <strong>Warning!</strong> For full functionality of this site it is necessary to enable JavaScript. Here are the
+        <a href="http://www.enable-javascript.com/" target=_blank>instructions how to enable JavaScript in your web browser.</a>
+      </div>
+    </div>
+  </noscript>
+</body>
+
+</html>

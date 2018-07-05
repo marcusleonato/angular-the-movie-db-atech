@@ -1,0 +1,14 @@
+<mat-sidenav-container fullscreen>
+  <mat-toolbar class="fixed-header" role="toolbar">
+    <div class="container">
+      <h1 class="logo" [routerLink]="['/movies']">{{title}}</h1>
+      <ul class="nav-bar">
+        <a class="mat-left" role="link" mat-list-item [routerLink]="['/discover']">Explorar</a>
+        <a class="mat-left" role="link" mat-list-item [routerLink]="['/movies']">Filmes</a>
+      </ul>
+    </div>
+  </mat-toolbar>
+
+  <router-outlet></router-outlet>
+
+</mat-sidenav-container>

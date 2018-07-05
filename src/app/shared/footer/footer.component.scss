@@ -1,0 +1,18 @@
+footer {
+    text-align: center;
+}
+
+.pagination {
+    p{
+        float:left;
+        color: #000;
+    }
+    .pagination-nav{
+        float: right;
+        li{
+            display: inline;
+            margin-left:5px;
+            cursor: pointer;
+        }
+    }
+}

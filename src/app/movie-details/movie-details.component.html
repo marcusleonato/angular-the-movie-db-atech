@@ -1,0 +1,63 @@
+<div>
+  <mat-progress-bar *ngIf="!movie" color="primary" mode="indeterminate"> </mat-progress-bar>
+  <div *ngIf="movie" class="movie-expo">
+    <div class="movie-background" [style.background-image]="'url(' + movie.backdrop_hd + ')'">
+    </div>
+    <div [title]="movie.title" class="movie-content-info container">
+      <div class="movie-content-image">
+        <div class="image">
+          <img [src]="movie.poster_hd" class="card-img" [alt]="movie.title">
+        </div>
+      </div>
+      <div class="infos">
+        <h2 class="title-movie">
+          {{movie.title}}
+        </h2>
+        <span class="date-release">( {{movie.release_date | date: 'y'}} )</span>
+        <div class="content-movie-action">
+          <div class="rating-content" data-percent="movie.vote_average">
+            <mat-progress-spinner class="spinner-rating" [value]="movie.vote_average" [diameter]="50" [color]="getColorRating(movie.vote_average)">
+            </mat-progress-spinner>
+            <span>{{movie.vote_average}}</span>
+          </div>
+        </div>
+        <div class="clear sinopse-content">
+          <h4>Sinopse</h4>
+          <p>{{movie.overview}}</p>
+          <h4 class="title-">Equipe técnica principal</h4>
+          <ol class="cast">
+            <a href="javascript:void(0)" *ngFor="let crew of  movie.crew">
+              <li *ngIf="crew.job ==='Director'">{{crew.name}}
+                <span>{{crew.job}}</span>
+              </li>
+            </a>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div *ngIf="movie" class="movie-details">
+    <div class="movie-nav">
+      <ul class="container">
+        <li *ngFor="let menu of  movieMenu">
+          <a mat-button>{{menu.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="content-tab">
+      <div class="container">
+        <ol class="cast-list">
+          <li class="title-cast">Elenco principal</li>
+          <li [title]="cast.name" class="cast-card" *ngFor="let cast of  movie.cast" href="javascript:void(0)">
+            <img [alt]="cast.name" [src]="cast.imgUrl">
+            <div class="content-cast">
+              <p>{{cast.name}}</p>
+              <p class="description">{{cast.character}}</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

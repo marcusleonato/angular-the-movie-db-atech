@@ -1,0 +1,21 @@
+<footer class="container">
+  <nav class="pagination clearfix">
+    <p>Atualmente na página: {{pager.currentPage}} de {{pager.totalPages}} </p>
+    <ul class="pagination-nav">
+      <li [ngClass]="{disabled:pager.currentPage === 1}" title="Prev">
+        <a (click)="setPage(pager.currentPage - 1)">
+            <fa [name]="'arrow-circle-left'" [size]=2></fa>
+        </a>
+      </li>
+      <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}" title="Next">
+        <a (click)="setPage(pager.currentPage + 1)">
+            <fa [name]="'arrow-circle-right'" [size]=2></fa>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="clearfix">
+    <p>
+    </p>
+  </div>
+</footer>

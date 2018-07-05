@@ -1,0 +1,35 @@
+@import './base/colors';
+
+/***
+  **Header
+***/
+.fixed-header {
+  background-color:$black-variant;
+  height: 111px;
+  .logo {
+    text-indent: -9999px;
+    background: url(../images/logo.png) no-repeat;
+    width: 45px;
+    height: 40px;
+    background-size: contain;
+    float: left;
+    margin-top: 6px;
+  }
+  .nav-bar {
+    float: left;
+    margin: 0;
+    a {
+      text-align: right;
+      padding: 10px 0;
+      color: $white;
+      font-weight: 600;
+      text-decoration: none;
+      margin-right: 35px;
+      font-size: 0.8em;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import '~@angular/material/theming';
+@import './base/colors';
+
+$my-theme-primary: mat-palette($mat-indigo, 700, 300, 900);
+$my-theme-accent: mat-palette($mat-light-blue);
+$my-theme-warn: mat-palette($mat-deep-orange, A200);
+$general-typography: mat-typography-config( $font-family: '"Source Sans Pro", "Arial", "sans-serif"');
+@include mat-core($general-typography);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.mat-left {
+  float: left;
+}
+
+.mat-sidenav-content{
+  background-color: $alabaster;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+.container {
+  clear: both;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.main-content {
+  padding: 20px 0;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  display: block;
+}
+
+.example-card {
+  width: 350px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.mat-spinner-green {
+  stroke:$spinner-green;
+}
+
+.mat-spinner-orange {
+  stroke:$spinner-orange;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+  .main-content {
+    padding: 5px;
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .mat-card-subtitle,
+  .mat-card-content,
+  .mat-card-header .mat-card-title {
+    font-size: 16px;
+  }
+}
