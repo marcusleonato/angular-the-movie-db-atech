@@ -1,6 +1,4 @@
-# Atech TMDB 
 
-Bem Vindo ao Atech The Movie Database
 
 <img src="https://raw.githubusercontent.com/marcusleonato/app/master/images/tmb.png" alt=" Atech The Movie Database" align="center" />
 
